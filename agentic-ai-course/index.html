@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ST: Agentic AI — University of Montana</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- =========================================================
+     NAV
+========================================================== -->
+<nav id="topnav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="index.html">CS 391 — ST: Agentic AI</a>
+    <div class="nav-links">
+      <a href="#schedule">Schedule</a>
+      <a href="#policies">Policies</a>
+      <div class="dropdown">
+        <a href="#">Handouts ▾</a>
+        <div class="dropdown-menu">
+          <a href="handouts/office-hours.html">Office Hours</a>
+          <a href="handouts/syllabus.html">Syllabus (PDF)</a>
+          <a href="handouts/python-setup.html">Python / Env Setup</a>
+          <a href="handouts/agent-frameworks.html">Agent Frameworks Primer</a>
+          <a href="handouts/project-guidelines.html">Final Project Guidelines</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#">Assignments ▾</a>
+        <div class="dropdown-menu">
+          <span class="dropdown-section">Programming</span>
+          <a href="assignments/hw1-reflex-agents.html">HW1 — Reflex Agents</a>
+          <a href="assignments/hw2-search.html">HW2 — Search &amp; Planning</a>
+          <a href="assignments/hw3-llm-tools.html">HW3 — LLM Tool Use</a>
+          <a href="assignments/hw4-multiagent.html">HW4 — Multi-Agent Systems</a>
+          <span class="dropdown-section">Projects</span>
+          <a href="assignments/final-project.html">Final Project</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- =========================================================
+     HERO
+========================================================== -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-seal">
+      <img src="img/um_seal.svg" alt="University of Montana Seal" onerror="this.style.display='none'" />
+      <div class="hero-seal-fallback" aria-hidden="true">UM</div>
+    </div>
+    <div class="hero-text">
+      <p class="hero-dept">University of Montana · Department of Computer Science</p>
+      <h1>Agentic AI</h1>
+      <p class="hero-subtitle">Special Topics in Artificial Intelligence &mdash; CS 391</p>
+      <p class="hero-meta">Spring 2026 &nbsp;·&nbsp; Mon / Wed / Fri 10:10–11:00am &nbsp;·&nbsp; <a href="https://goo.gl/maps/example" target="_blank">Social Sciences 352</a></p>
+    </div>
+  </div>
+</header>
+
+<!-- =========================================================
+     HERO IMAGE STRIP
+========================================================== -->
+<section class="image-strip">
+  <div class="strip-item" title="LLM-Powered Agents">
+    <div class="strip-img strip-img-1"></div>
+    <span>LLM Agents</span>
+  </div>
+  <div class="strip-item" title="Autonomous Planning">
+    <div class="strip-img strip-img-2"></div>
+    <span>Autonomous Planning</span>
+  </div>
+  <div class="strip-item" title="Multi-Agent Systems">
+    <div class="strip-img strip-img-3"></div>
+    <span>Multi-Agent Systems</span>
+  </div>
+  <div class="strip-item" title="Reinforcement Learning">
+    <div class="strip-img strip-img-4"></div>
+    <span>Reinforcement Learning</span>
+  </div>
+  <div class="strip-item" title="Safe & Responsible AI">
+    <div class="strip-img strip-img-5"></div>
+    <span>Safe &amp; Responsible AI</span>
+  </div>
+</section>
+
+<!-- =========================================================
+     MAIN CONTENT — 2 COLUMNS
+========================================================== -->
+<div class="content-wrapper">
+
+  <!-- ---- LEFT: NEWS FEED ---- -->
+  <aside class="news-feed">
+    <h2>News Feed</h2>
+    <ul>
+      <li>Welcome to ST: Agentic AI! Please review the <a href="handouts/syllabus.html">syllabus</a> before our first meeting.</li>
+      <li>Office hours and the course Discord link are posted under <a href="handouts/office-hours.html">Handouts → Office Hours</a>.</li>
+      <li>Sign up for the course on <a href="https://umt.instructure.com" target="_blank">Moodle (Canvas)</a> to receive announcements.</li>
+      <li>Make sure your <a href="handouts/python-setup.html">Python / conda environment</a> is ready before Week 1 ends.</li>
+      <li>HW1 (Reflex Agents) will be released at the end of Week 1, due two weeks later.</li>
+    </ul>
+  </aside>
+
+  <!-- ---- RIGHT: COURSE INFO ---- -->
+  <section class="course-info">
+    <h2>Course Information</h2>
+
+    <p><strong>Instructor:</strong> <em>[Your Name]</em> — <a href="mailto:firstname.lastname@umontana.edu">firstname.lastname@umontana.edu</a></p>
+
+    <p><strong>Office Hours:</strong> See the <a href="handouts/office-hours.html">office hours calendar</a>. Additional hours available by appointment.</p>
+
+    <p><strong>Book:</strong> Russell &amp; Norvig. <a href="https://aima.cs.berkeley.edu" target="_blank"><em>Artificial Intelligence: A Modern Approach</em></a>, <strong>4th edition</strong> (Pearson, 2021). ISBN 978-0-13-461099-3</p>
+
+    <p><strong>Prerequisites:</strong> CS 232 (Data Structures) or equivalent; basic probability and linear algebra; solid programming skills in Python. Exposure to machine learning helpful but not required.</p>
+
+    <p><strong>Lectures:</strong> Attendance is strongly encouraged — in-class discussion and live demos are a core part of the experience. Recordings (when available) will be posted to Moodle within 48 hours.</p>
+
+    <p><strong>Contact:</strong> Please use the course Discord for questions about lectures, homework, and projects. For private matters email the instructor directly.</p>
+
+    <h3>Grading</h3>
+    <table class="grade-table">
+      <thead><tr><th>Component</th><th>Weight</th></tr></thead>
+      <tbody>
+        <tr><td>Programming Assignments (4)</td><td>40%</td></tr>
+        <tr><td>Midterm Exam</td><td>20%</td></tr>
+        <tr><td>Final Project</td><td>30%</td></tr>
+        <tr><td>Participation</td><td>10%</td></tr>
+      </tbody>
+    </table>
+  </section>
+</div>
+
+<!-- =========================================================
+     SCHEDULE
+========================================================== -->
+<section id="schedule" class="schedule-section">
+  <div class="schedule-inner">
+    <h2>Tentative Schedule</h2>
+    <p class="schedule-note">Readings refer to <em>Artificial Intelligence: A Modern Approach</em>, 4th ed. (Russell &amp; Norvig, 2021).</p>
+
+    <table class="schedule-table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Topic</th>
+          <th>Reading (4th ed.)</th>
+          <th>Slides</th>
+          <th>Assignment</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <!-- MODULE 1 -->
+        <tr class="module-header">
+          <td colspan="5">Module 1 — Foundations: What Is an Agent?</td>
+        </tr>
+        <tr>
+          <td>Jan 21 [W]</td>
+          <td>Course Overview &amp; The Agent Paradigm</td>
+          <td>Ch. 1, Ch. 2 (§2.1–2.3)</td>
+          <td><a href="#">slides</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Jan 23 [F]</td>
+          <td>Rational Agents &amp; PEAS Framework</td>
+          <td>Ch. 2 (§2.3–2.4)</td>
+          <td><a href="#">slides</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Jan 26 [M]</td>
+          <td>Agent Architectures: Reflex, Model-Based, Goal-Based, Utility</td>
+          <td>Ch. 2 (§2.4)</td>
+          <td><a href="#">slides</a></td>
+          <td><a href="assignments/hw1-reflex-agents.html">HW1 — Reflex Agents</a> <em>(due Feb 9)</em></td>
+        </tr>
+
+        <!-- MODULE 2 -->
+        <tr class="module-header">
+          <td colspan="5">Module 2 — Search &amp; Planning</td>
+        </tr>
+        <tr>
+          <td>Jan 28 [W]</td>
+          <td>Problem Formulation &amp; Uninformed Search</td>
+          <td>Ch. 3 (§3.1–3.4)</td>
+          <td><a href="#">slides</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Jan 30 [F]</td>
+          <td>Heuristics &amp; A* Search</td>
+          <td>Ch. 3 (§3.5–3.6)</td>
+          <td><a href="#">slides</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Feb 2 [M]</td>
+          <td>Search in Complex Environments — Local &amp; Online</td>
+          <td>Ch. 4 (§4.1–4.4)</td>
+          <td><a href="#">slides</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Feb 4 [W]</td>
+          <td>Adversarial Search &amp; Monte Carlo Tree Search</td>
+          <td>Ch. 5 (§5.1–5.5)</td>
+          <td><a href="#">slides</a></td>
+          <td><a href="assignments/hw2-search.html">HW2 — Search &amp; Planning</a> <em>(due Feb 23)</em></td>
+        </tr>
+        <tr>
+          <td>Feb 6 [F]</td>
+          <td>Classical Planning (STRIPS / PDDL)</td>
+          <td>Ch. 11 (§11.1–11.3)</td>
+          <td><a href="#">slides</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Feb 9 [M]</td>
+          <td>Planning with Uncertainty — MDPs</td>
+          <td>Ch. 17 (§17.1–17.3)</td>
+          <td><a href="#">slides</a></td>
+          <td></td>
+        </tr>
+
+        <!-- MODULE 3 -->
+        <tr class="module-header">
+          <td colspan="5">Module 3 — Reasoning Under Uncertainty</td>
+        </tr>
+        <tr>
+          <td>Feb 11 [W]</td>
+          <td>Probability Review &amp; Bayesian Inference</td>
+          <td>Ch. 12 (§12.1–12.5)</td>
+          <td><a href="#">slides</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Feb 13 [F]</td>
+          <td>Bayesian Networks</td>
+          <td>Ch. 13 (§13.1–13.4)</td>
+          <td><a href="#">slides</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Feb 16 [M]</td>
+          <td><em>Presidents' Day — No Class</em></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Feb 18 [W]</td>
+          <td>Temporal Models &amp; Hidden Markov Models</td>
+          <td>Ch. 14 (§14.1–14.4)</td>
+          <td><a href="#">slides</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Feb 20 [F]</td>
+          <td>Probabilistic Programming</td>
+          <td>Ch. 15 (§15.1–15.3)</td>
+          <td><a href="#">slides</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Feb 23 [M]</td>
+          <td>Decision Theory &amp; Utility Functions</td>
+          <td>Ch. 16 (§16.1–16.4)</td>
+          <td><a href="#">slides</a></td>
+          <td></td>
+        </tr>
+
+        <!-- MODULE 4 -->
+        <tr class="module-header">
+          <td colspan="5">Module 4 — Machine Learning for Agents</td>
+        </tr>
+        <tr>
+          <td>Feb 25 [W]</td>
+          <td>Supervised Learning &amp; Generalization</td>
+          <td>Ch. 19 (§19.1–19.3)</td>
+          <td><a href="#">slides</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Feb 27 [F]</td>
+          <td>Deep Learning Fundamentals</td>
+          <td>Ch. 21 (§21.1–21.4)</td>
+          <td><a href="#">slides</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Mar 2 [M]</td>
+          <td>Reinforcement Learning — Foundations</td>
+          <td>Ch. 22 (§22.1–22.3)</td>
+          <td><a href="#">slides</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Mar 4 [W]</td>
+          <td>Deep RL — Policy Gradients &amp; PPO</td>
+          <td>Ch. 22 (§22.4–22.6)</td>
+          <td><a href="#">slides</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Mar 6 [F]</td>
+          <td>Midterm Review</td>
+          <td>Chs. 1–5, 11–17, 19, 21–22</td>
+          <td><a href="#">slides</a></td>
+          <td></td>
+        </tr>
+        <tr class="exam-row">
+          <td>Mar 9 [M]</td>
+          <td>⚡ Midterm Exam</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
+        <!-- MODULE 5 -->
+        <tr class="module-header">
+          <td colspan="5">Module 5 — LLMs as Agent Backbones</td>
+        </tr>
+        <tr>
+          <td>Mar 11 [W]</td>
+          <td>Transformer Architecture &amp; Pretraining</td>
+          <td>Ch. 24 (§24.1–24.2)</td>
+          <td><a href="#">slides</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Mar 13 [F]</td>
+          <td>Prompt Engineering &amp; In-Context Learning</td>
+          <td>Ch. 24 (§24.3)</td>
+          <td><a href="#">slides</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Mar 16–20</td>
+          <td><em>Spring Break — No Class</em></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Mar 23 [M]</td>
+          <td>Tool Use &amp; Function Calling in LLMs</td>
+          <td>Supplemental readings</td>
+          <td><a href="#">slides</a></td>
+          <td><a href="assignments/hw3-llm-tools.html">HW3 — LLM Tool Use</a> <em>(due Apr 6)</em></td>
+        </tr>
+        <tr>
+          <td>Mar 25 [W]</td>
+          <td>RAG: Retrieval-Augmented Generation</td>
+          <td>Supplemental readings</td>
+          <td><a href="#">slides</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Mar 27 [F]</td>
+          <td>ReAct, Chain-of-Thought &amp; Agentic Reasoning</td>
+          <td>Supplemental readings</td>
+          <td><a href="#">slides</a></td>
+          <td></td>
+        </tr>
+
+        <!-- MODULE 6 -->
+        <tr class="module-header">
+          <td colspan="5">Module 6 — Multi-Agent Systems</td>
+        </tr>
+        <tr>
+          <td>Mar 30 [M]</td>
+          <td>Multiagent Decision Making &amp; Game Theory</td>
+          <td>Ch. 18 (§18.1–18.3)</td>
+          <td><a href="#">slides</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Apr 1 [W]</td>
+          <td>Nash Equilibria &amp; Mechanism Design</td>
+          <td>Ch. 18 (§18.4–18.6)</td>
+          <td><a href="#">slides</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Apr 3 [F]</td>
+          <td>LLM-Orchestrated Multi-Agent Pipelines</td>
+          <td>Supplemental readings</td>
+          <td><a href="#">slides</a></td>
+          <td><a href="assignments/hw4-multiagent.html">HW4 — Multi-Agent Systems</a> <em>(due Apr 20)</em></td>
+        </tr>
+        <tr>
+          <td>Apr 6 [M]</td>
+          <td>Agent Communication &amp; Shared Memory</td>
+          <td>Supplemental readings</td>
+          <td><a href="#">slides</a></td>
+          <td></td>
+        </tr>
+
+        <!-- MODULE 7 -->
+        <tr class="module-header">
+          <td colspan="5">Module 7 — Robotics &amp; Embodied Agents</td>
+        </tr>
+        <tr>
+          <td>Apr 8 [W]</td>
+          <td>Robotic Perception &amp; State Estimation</td>
+          <td>Ch. 26 (§26.1–26.3)</td>
+          <td><a href="#">slides</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Apr 10 [F]</td>
+          <td>Motion Planning &amp; Control</td>
+          <td>Ch. 26 (§26.4–26.5)</td>
+          <td><a href="#">slides</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Apr 13 [M]</td>
+          <td>RL for Robotics</td>
+          <td>Ch. 26 (§26.6)</td>
+          <td><a href="#">slides</a></td>
+          <td></td>
+        </tr>
+
+        <!-- MODULE 8 -->
+        <tr class="module-header">
+          <td colspan="5">Module 8 — Safety, Ethics &amp; The Big Picture</td>
+        </tr>
+        <tr>
+          <td>Apr 15 [W]</td>
+          <td>AI Safety: Alignment &amp; Robustness</td>
+          <td>Ch. 27 (§27.1–27.3)</td>
+          <td><a href="#">slides</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Apr 17 [F]</td>
+          <td>Fairness, Privacy, &amp; Societal Impact</td>
+          <td>Ch. 27 (§27.4–27.6)</td>
+          <td><a href="#">slides</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Apr 20 [M]</td>
+          <td>The Future of Agentic AI — Guest Lecture / Discussion</td>
+          <td>Ch. 28</td>
+          <td><a href="#">slides</a></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Apr 22–May 1</td>
+          <td>Final Project Presentations</td>
+          <td></td>
+          <td></td>
+          <td><a href="assignments/final-project.html">Final Project</a> <em>(due May 5)</em></td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- =========================================================
+     POLICIES
+========================================================== -->
+<section id="policies" class="policies-section">
+  <div class="policies-inner">
+    <h2>Policies</h2>
+
+    <div class="policy-grid">
+
+      <div class="policy-card">
+        <h3>Collaboration</h3>
+        <p>You are encouraged to discuss assignments in small groups. However, every line of code and every written answer you submit must be your own. Do not share code or written work directly with other students.</p>
+      </div>
+
+      <div class="policy-card">
+        <h3>Late Work</h3>
+        <p>You have <strong>four</strong> late days for the semester. Each late day extends a deadline by 24 hours. Late days may not be applied to the final project. Once late days are exhausted, late submissions will not be accepted without prior instructor approval.</p>
+      </div>
+
+      <div class="policy-card">
+        <h3>Use of AI Tools</h3>
+        <p>Given the subject matter, thoughtful use of AI coding assistants (e.g., GitHub Copilot, Claude) is permitted and encouraged as a learning aid. You must understand and be able to explain every line you submit. Undisclosed wholesale generation of assignment solutions is an honor-code violation.</p>
+      </div>
+
+      <div class="policy-card">
+        <h3>Submission</h3>
+        <p>All assignments are submitted via Moodle unless stated otherwise. Follow the submission instructions in each handout exactly. Autograded components require correct file naming — re-read instructions before submitting.</p>
+      </div>
+
+      <div class="policy-card">
+        <h3>Academic Integrity</h3>
+        <p>The University of Montana <a href="https://www.umt.edu/student-affairs/community-standards/student-conduct-code.php" target="_blank">Student Conduct Code</a> applies to all work in this course. Violations will be referred to the Office of Student Conduct. The standard penalty is course failure or suspension.</p>
+      </div>
+
+      <div class="policy-card">
+        <h3>Accessibility</h3>
+        <p>Students who require accommodations should contact <a href="https://www.umt.edu/disability/" target="_blank">Disability Services for Students</a> and provide documentation to the instructor within the first two weeks of class.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     FOOTER
+========================================================== -->
+<footer>
+  <p>© University of Montana <span id="year"></span> &nbsp;|&nbsp; CS 391 ST: Agentic AI &nbsp;|&nbsp; Modeled after <a href="https://web.stanford.edu/~cpiech/cs221/" target="_blank">Stanford CS221</a> by Chris Piech</p>
+  <p>Textbook: Russell &amp; Norvig, <em>Artificial Intelligence: A Modern Approach</em>, 4th ed. &mdash; <a href="https://aima.cs.berkeley.edu" target="_blank">aima.cs.berkeley.edu</a></p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

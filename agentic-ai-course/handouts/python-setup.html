@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python & Environment Setup — CS 391 Agentic AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+<nav id="topnav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="../index.html">← CS 391 — ST: Agentic AI</a>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <p class="breadcrumb"><a href="../index.html">Home</a> / Handouts / Python & Env Setup</p>
+  <h1>Python &amp; Environment Setup</h1>
+
+  <p>All programming assignments use <strong>Python 3.11+</strong>. We recommend managing dependencies with <strong>conda</strong> (via Miniforge or Anaconda).</p>
+
+  <h2>1 — Install Miniforge</h2>
+  <p>Download and install <a href="https://github.com/conda-forge/miniforge" target="_blank">Miniforge</a> for your OS (Windows, macOS, Linux). Then verify:</p>
+  <pre>conda --version</pre>
+
+  <h2>2 — Create the Course Environment</h2>
+  <pre>conda create -n agentic-ai python=3.11 -y
+conda activate agentic-ai</pre>
+
+  <h2>3 — Install Core Packages</h2>
+  <pre>pip install numpy scipy matplotlib pandas jupyter \
+    openai anthropic langchain langgraph \
+    gymnasium stable-baselines3 torch torchvision</pre>
+
+  <h2>4 — API Keys</h2>
+  <p>Several assignments use LLM APIs. Store your keys as environment variables — <strong>never</strong> hard-code them or commit them to git.</p>
+  <pre># macOS / Linux — add to ~/.zshrc or ~/.bashrc
+export OPENAI_API_KEY="sk-..."
+export ANTHROPIC_API_KEY="sk-ant-..."</pre>
+  <pre># Windows PowerShell
+$env:OPENAI_API_KEY="sk-..."</pre>
+
+  <h2>5 — Verify</h2>
+  <pre>python - &lt;&lt;'EOF'
+import openai, anthropic, gymnasium, torch
+print("All packages imported successfully.")
+print("PyTorch version:", torch.__version__)
+EOF</pre>
+
+  <h2>Troubleshooting</h2>
+  <ul>
+    <li>On Apple Silicon, install PyTorch with <code>pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu</code> for CPU-only, or follow the official MPS guide.</li>
+    <li>If conda is slow, switch to <code>mamba</code> (included with Miniforge): replace <code>conda</code> with <code>mamba</code> in any command.</li>
+    <li>Post in <code>#setup-help</code> on Discord with your OS, Python version, and the full error traceback.</li>
+  </ul>
+</div>
+</body>
+</html>

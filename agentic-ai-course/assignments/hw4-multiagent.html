@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HW4 — Multi-Agent Systems | CS 391 Agentic AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+<nav id="topnav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="../index.html">← CS 391 — ST: Agentic AI</a>
+  </div>
+</nav>
+<div class="page-wrap">
+  <p class="breadcrumb"><a href="../index.html">Home</a> / Assignments / HW4</p>
+  <h1>HW4 — Multi-Agent Systems</h1>
+  <p><strong>Released:</strong> April 3 &nbsp;·&nbsp; <strong>Due:</strong> April 20, 11:59pm &nbsp;·&nbsp; <strong>Points:</strong> 100</p>
+
+  <h2>Overview</h2>
+  <p>Build a multi-agent pipeline using LangGraph in which multiple LLM-powered agents collaborate (and potentially compete) to solve a complex task. Corresponds to AIMA 4th ed. Chapter 18 and supplemental readings on LLM orchestration.</p>
+
+  <h2>Tasks</h2>
+  <ol>
+    <li><strong>Cooperative Research Pipeline</strong> (40 pts) — Implement a 3-agent system: a <em>Planner</em>, a <em>Researcher</em>, and a <em>Writer</em>. The system must produce a structured 500-word report on an assigned topic using web search tools.</li>
+    <li><strong>Debate System</strong> (30 pts) — Implement a 2-agent debate: one agent argues <em>for</em>, one <em>against</em> a proposition. A judge agent (separate LLM call) scores each round. Run 3 debate rounds on a provided topic.</li>
+    <li><strong>Analysis</strong> (30 pts) — For each system, measure quality (human-rated rubric provided) and cost (total tokens). Discuss trade-offs between number of agents, quality, and cost.</li>
+  </ol>
+
+  <h2>Submission</h2>
+  <p>Submit via Moodle as <code>hw4-multiagent.zip</code>. Include a <code>results/</code> folder with your generated reports and debate transcripts.</p>
+</div>
+</body>
+</html>

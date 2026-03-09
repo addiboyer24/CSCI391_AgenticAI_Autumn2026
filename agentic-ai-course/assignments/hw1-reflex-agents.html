@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HW1 — Reflex Agents | CS 391 Agentic AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+<nav id="topnav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="../index.html">← CS 391 — ST: Agentic AI</a>
+  </div>
+</nav>
+<div class="page-wrap">
+  <p class="breadcrumb"><a href="../index.html">Home</a> / Assignments / HW1</p>
+  <h1>HW1 — Reflex Agents</h1>
+  <p><strong>Released:</strong> Week 1 &nbsp;·&nbsp; <strong>Due:</strong> February 9, 11:59pm &nbsp;·&nbsp; <strong>Points:</strong> 100</p>
+
+  <h2>Overview</h2>
+  <p>In this assignment you will implement several simple reflex agents operating in a grid-world environment, then analyze their performance against environment properties (fully/partially observable, deterministic/stochastic). The goal is to build intuition for the PEAS framework and the distinction between agent types described in AIMA Chapter 2.</p>
+
+  <h2>Learning Objectives</h2>
+  <ul>
+    <li>Implement simple-reflex and model-based reflex agents in Python.</li>
+    <li>Characterize an environment using the PEAS framework.</li>
+    <li>Measure agent performance using a custom performance measure.</li>
+    <li>Understand the limitations of reflex agents in partially observable environments.</li>
+  </ul>
+
+  <h2>Getting Started</h2>
+  <p>Download the starter code from Moodle (<code>hw1-reflex-agents.zip</code>). Extract and install dependencies:</p>
+  <pre>cd hw1-reflex-agents
+pip install -e .
+python run_agent.py --agent simple_reflex --env vacuum</pre>
+
+  <h2>Tasks</h2>
+  <ol>
+    <li><strong>Implement SimpleReflexAgent</strong> (30 pts) — Complete <code>agents/simple_reflex.py</code>. The agent receives a percept and must return an action using only condition-action rules.</li>
+    <li><strong>Implement ModelBasedReflexAgent</strong> (30 pts) — Complete <code>agents/model_based.py</code>. Maintain an internal state model to handle partial observability.</li>
+    <li><strong>PEAS Analysis</strong> (20 pts) — In <code>report/peas_analysis.md</code>, describe the PEAS for two environments of your choice from the provided set.</li>
+    <li><strong>Performance Comparison</strong> (20 pts) — Run both agents across 100 random episodes in the stochastic vacuum world and report mean performance. Write up your findings in <code>report/analysis.md</code>.</li>
+  </ol>
+
+  <h2>Submission</h2>
+  <p>Submit via Moodle: a single <code>.zip</code> of your project directory. Ensure your code runs from a fresh environment install. Include your two report markdown files.</p>
+
+  <h2>Reading</h2>
+  <p>Russell &amp; Norvig, <em>AIMA 4th ed.</em>, Chapter 2 (all sections).</p>
+</div>
+</body>
+</html>

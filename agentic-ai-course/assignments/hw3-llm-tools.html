@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HW3 — LLM Tool Use | CS 391 Agentic AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+<nav id="topnav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="../index.html">← CS 391 — ST: Agentic AI</a>
+  </div>
+</nav>
+<div class="page-wrap">
+  <p class="breadcrumb"><a href="../index.html">Home</a> / Assignments / HW3</p>
+  <h1>HW3 — LLM Tool Use &amp; ReAct Agents</h1>
+  <p><strong>Released:</strong> March 23 &nbsp;·&nbsp; <strong>Due:</strong> April 6, 11:59pm &nbsp;·&nbsp; <strong>Points:</strong> 100</p>
+
+  <h2>Overview</h2>
+  <p>You will build a <em>ReAct</em>-style agent (Reason + Act) that uses an LLM backbone combined with a set of tools to answer multi-hop questions. This is the core architecture behind many production agentic systems today.</p>
+
+  <h2>Learning Objectives</h2>
+  <ul>
+    <li>Implement the ReAct agent loop (thought → action → observation → repeat).</li>
+    <li>Define and register tools using the OpenAI or Anthropic function-calling API.</li>
+    <li>Evaluate agent accuracy on a benchmark of multi-hop questions.</li>
+    <li>Analyze failure modes: hallucination, tool misuse, infinite loops.</li>
+  </ul>
+
+  <h2>Provided Tools</h2>
+  <ul>
+    <li><code>wikipedia_search(query)</code> — Returns the first paragraph of a Wikipedia article.</li>
+    <li><code>calculator(expression)</code> — Evaluates a safe arithmetic expression.</li>
+    <li><code>get_date()</code> — Returns today's date.</li>
+  </ul>
+
+  <h2>Tasks</h2>
+  <ol>
+    <li><strong>Implement ReActAgent</strong> (40 pts) — Complete the agent loop in <code>agents/react_agent.py</code>. The agent must parse LLM output to detect tool calls, execute them, and feed results back.</li>
+    <li><strong>Benchmark Evaluation</strong> (30 pts) — Run your agent on 50 provided questions from <code>data/questions.json</code>. Compute exact-match accuracy and average number of tool calls per question.</li>
+    <li><strong>Prompt Engineering</strong> (15 pts) — Experiment with at least two different system-prompt designs. Report how accuracy changes and explain why.</li>
+    <li><strong>Error Analysis</strong> (15 pts) — Identify and categorize 5 failure cases. What went wrong and how could it be fixed?</li>
+  </ol>
+
+  <h2>API Usage &amp; Cost</h2>
+  <p>Use GPT-4o-mini or Claude Haiku to keep costs low during development. The benchmark evaluation should cost under $1 total. Do not use your key on the full benchmark more than once — batch your calls.</p>
+
+  <h2>Reading</h2>
+  <p>Yao et al. (2023), "ReAct: Synergizing Reasoning and Acting in Language Models." <em>ICLR 2023.</em> (Posted on Moodle.)</p>
+</div>
+</body>
+</html>

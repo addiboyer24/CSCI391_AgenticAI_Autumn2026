@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agent Frameworks Primer — CS 391 Agentic AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+<nav id="topnav">
+  <div class="nav-inner">
+    <a class="nav-brand" href="../index.html">← CS 391 — ST: Agentic AI</a>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <p class="breadcrumb"><a href="../index.html">Home</a> / Handouts / Agent Frameworks Primer</p>
+  <h1>Agent Frameworks Primer</h1>
+  <p>A quick survey of the primary libraries and frameworks used throughout the course.</p>
+
+  <h2>LangChain &amp; LangGraph</h2>
+  <p><a href="https://python.langchain.com" target="_blank">LangChain</a> provides composable primitives for building LLM applications. <a href="https://langchain-ai.github.io/langgraph/" target="_blank">LangGraph</a> extends this with a graph-based approach to stateful, multi-step agents with cycles and branching.</p>
+  <pre>from langgraph.graph import StateGraph, END
+
+def my_node(state):
+    # Process state, return updated state
+    return {"messages": state["messages"] + ["..."] }
+
+graph = StateGraph(dict)
+graph.add_node("my_node", my_node)
+graph.set_entry_point("my_node")
+graph.add_edge("my_node", END)
+app = graph.compile()</pre>
+
+  <h2>OpenAI &amp; Anthropic SDKs</h2>
+  <p>We use both APIs in this course. Familiarize yourself with function/tool calling, which is the primary mechanism for giving agents the ability to take actions.</p>
+  <pre>from anthropic import Anthropic
+client = Anthropic()
+
+response = client.messages.create(
+    model="claude-opus-4-6",
+    max_tokens=1024,
+    tools=[{
+        "name": "get_weather",
+        "description": "Get current weather for a city",
+        "input_schema": {
+            "type": "object",
+            "properties": { "city": {"type": "string"} },
+            "required": ["city"]
+        }
+    }],
+    messages=[{"role": "user", "content": "What's the weather in Missoula?"}]
+)</pre>
+
+  <h2>Gymnasium (RL Environments)</h2>
+  <p><a href="https://gymnasium.farama.org" target="_blank">Gymnasium</a> (formerly OpenAI Gym) provides standardized environments for reinforcement learning experiments.</p>
+  <pre>import gymnasium as gym
+env = gym.make("CartPole-v1", render_mode="human")
+obs, info = env.reset()
+for _ in range(200):
+    action = env.action_space.sample()  # random policy
+    obs, reward, terminated, truncated, info = env.step(action)
+    if terminated or truncated:
+        obs, info = env.reset()
+env.close()</pre>
+
+  <h2>Additional Resources</h2>
+  <ul>
+    <li><a href="https://python.langchain.com/docs/" target="_blank">LangChain Docs</a></li>
+    <li><a href="https://docs.anthropic.com" target="_blank">Anthropic API Docs</a></li>
+    <li><a href="https://platform.openai.com/docs" target="_blank">OpenAI API Docs</a></li>
+    <li><a href="https://gymnasium.farama.org/content/basic_usage/" target="_blank">Gymnasium Basic Usage</a></li>
+    <li><a href="https://aima.cs.berkeley.edu/code.html" target="_blank">AIMA 4th ed. Code Repository</a></li>
+  </ul>
+</div>
+</body>
+</html>
