@@ -5,17 +5,29 @@
 
 /* ---- TOKENS ---- */
 :root {
-  --maroon:    #5B0C22;
-  --maroon-dk: #3D0817;
-  --maroon-lt: #7a1030;
-  --copper:    #C17F44;
-  --copper-lt: #DBA96A;
-  --cream:     #F7F3EE;
-  --stone:     #E8E2DA;
+  /* PRIMARY BRAND COLORS */
+  --maroon:    #70002E;   /* Griz Maroon (official) */
+  --maroon-dk: #4d001f;   /* derived darker shade */
+  --maroon-lt: #8c1c4a;   /* derived lighter shade */
+
+  --copper:    #ED8B00;   /* Copper Climb (official) */
+  --copper-lt: #F2A74B;   /* softened UI-friendly variant */
+
+  --red-accent:#F9423A;   /* Sunset Red (official secondary) */
+
+  /* NEUTRALS (aligned closer to brand system) */
+  --cream:     #EFE8D4;   /* Wheat */
+  --stone:     #DFD1A7;   /* Trail Sign Tan */
   --ink:       #1A1410;
   --ink-mid:   #3D3530;
   --ink-light: #6B5F58;
   --white:     #FFFFFF;
+
+  /* OPTIONAL EXPANSION COLORS */
+  --green:     #1D3C34;   /* Lubrecht Green */
+  --sky:       #BBDDE6;   /* Glacier Sky */
+
+  /* SYSTEM */
   --nav-h:     58px;
   --max-w:     1140px;
   --radius:    6px;
